@@ -1,0 +1,207 @@
+{
+  "worlds": [
+    {
+      "id": 1,
+      "name": "Mundo de las Flores",
+      "startNodeId": 1,
+      "nodes": [
+        {
+          "id": 1,
+          "gridX": 1,
+          "gridY": 5,
+          "title": "Inicio",
+          "url": "/pages/bee-anatomy.html",
+          "type": "level",
+          "connections": { "right": 2 }
+        },
+        {
+          "id": 2,
+          "gridX": 2,
+          "gridY": 5,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 1, "right": 3 }
+        },
+        {
+          "id": 3,
+          "gridX": 3,
+          "gridY": 5,
+          "title": "Anatomía",
+          "url": "/pages/bee-anatomy.html",
+          "type": "level",
+          "connections": { "left": 2, "right": 4, "up": 7 }
+        },
+        {
+          "id": 4,
+          "gridX": 4,
+          "gridY": 5,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 3, "right": 5 }
+        },
+        {
+          "id": 5,
+          "gridX": 5,
+          "gridY": 5,
+          "title": "Ciclo de Vida",
+          "url": "/pages/bee-lifecycle.html",
+          "type": "level",
+          "connections": { "left": 4 }
+        },
+        {
+          "id": 7,
+          "gridX": 3,
+          "gridY": 4,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "down": 3, "up": 8 }
+        },
+        {
+          "id": 8,
+          "gridX": 3,
+          "gridY": 3,
+          "title": "Colmena",
+          "url": "/pages/bee-hive.html",
+          "type": "level",
+          "connections": { "down": 7, "right": 9 }
+        },
+        {
+          "id": 9,
+          "gridX": 4,
+          "gridY": 3,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 8, "right": 10 }
+        },
+        {
+          "id": 10,
+          "gridX": 5,
+          "gridY": 3,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 9, "right": 11 }
+        },
+        {
+          "id": 11,
+          "gridX": 6,
+          "gridY": 3,
+          "title": "Miel",
+          "url": "/pages/honey-production.html",
+          "type": "level",
+          "connections": { "left": 10, "right": 12 }
+        },
+        {
+          "id": 12,
+          "gridX": 7,
+          "gridY": 3,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 11, "right": 13 }
+        },
+        {
+          "id": 13,
+          "gridX": 8,
+          "gridY": 3,
+          "title": "Polinización",
+          "url": "/pages/pollination.html",
+          "type": "level",
+          "connections": { "left": 12 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mundo del Jardín",
+      "startNodeId": 20,
+      "nodes": [
+        {
+          "id": 20,
+          "gridX": 4,
+          "gridY": 4,
+          "title": "Centro",
+          "url": "/pages/bee-species.html",
+          "type": "level",
+          "connections": { "up": 21, "down": 23, "left": 25, "right": 27 }
+        },
+        {
+          "id": 21,
+          "gridX": 4,
+          "gridY": 3,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "down": 20, "up": 22 }
+        },
+        {
+          "id": 22,
+          "gridX": 4,
+          "gridY": 2,
+          "title": "Comunicación",
+          "url": "/pages/bee-communication.html",
+          "type": "level",
+          "connections": { "down": 21 }
+        },
+        {
+          "id": 23,
+          "gridX": 4,
+          "gridY": 5,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "up": 20, "down": 24 }
+        },
+        {
+          "id": 24,
+          "gridX": 4,
+          "gridY": 6,
+          "title": "Amenazas",
+          "url": "/pages/bee-threats.html",
+          "type": "level",
+          "connections": { "up": 23 }
+        },
+        {
+          "id": 25,
+          "gridX": 3,
+          "gridY": 4,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "right": 20, "left": 26 }
+        },
+        {
+          "id": 26,
+          "gridX": 2,
+          "gridY": 4,
+          "title": "Especies",
+          "url": "/pages/bee-species.html",
+          "type": "level",
+          "connections": { "right": 25 }
+        },
+        {
+          "id": 27,
+          "gridX": 5,
+          "gridY": 4,
+          "title": "",
+          "url": "",
+          "type": "connector",
+          "connections": { "left": 20, "right": 28 }
+        },
+        {
+          "id": 28,
+          "gridX": 6,
+          "gridY": 4,
+          "title": "Conservación",
+          "url": "/pages/bee-conservation.html",
+          "type": "level",
+          "connections": { "left": 27 }
+        }
+      ]
+    }
+  ]
+}
