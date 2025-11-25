@@ -25,6 +25,7 @@ export const loadWorldsFromJSON = async (): Promise<World[]> => {
   try {
     console.log('Intentando cargar worlds.json...');
     const response = await fetch('/data/worlds.json');
+
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
