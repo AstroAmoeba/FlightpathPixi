@@ -74,7 +74,7 @@ export class MapRenderer {
         const line = new PIXI.TilingSprite(
           this.lineTexture || PIXI.Texture.WHITE, // Fallback to a white texture if lineTexture is not loaded
           adjustedDistance,
-          8 // Line thickness
+          10 // Line thickness
         );
 
         // Set the anchor to center the line
@@ -183,6 +183,78 @@ export class MapRenderer {
   }
 
   /**
+   * Carga el fondo del diagrama desde una textura
+   */
+  private async loadDiagramBackground(): Promise<void> {
+    try {
+      const texture = await PIXI.Assets.load('/assets/textures/background.png');
+      const background = new PIXI.Sprite(texture);
+
+      background.width = this.container.width || 1400;
+      background.height = this.container.height || 800;
+      background.position.set(0, 0);
+
+      this.container.addChildAt(background as unknown as PIXI.DisplayObject, 0); // Add the background at the lowest layer
+    } catch (error) {
+      console.warn('⚠️ No se pudo cargar la textura de fondo del diagrama.');
+    }
+  }
+
+  /**
+   * Dibuja un borde alrededor del diagrama
+   */
+  private drawDiagramBorder(world: World): void {
+    if (!this.container || !this.container.transform) {
+      console.warn('⚠️ El contenedor o su transformación no están inicializados.');
+      return;
+    }
+
+    // Calculate the bounding box based on node positions
+    const padding = 1; // Reduced padding to 1 grid space for a tighter fit
+    const nodePositions = world.nodes.map(node => ({
+      x: node.gridX * 100, // Assuming each grid space is 100px wide
+      y: node.gridY * 100  // Assuming each grid space is 100px tall
+    }));
+
+    const minX = Math.min(...nodePositions.map(pos => pos.x)) - padding * 100;
+    const maxX = Math.max(...nodePositions.map(pos => pos.x)) + padding * 100;
+    const minY = Math.min(...nodePositions.map(pos => pos.y)) - padding * 100;
+    const maxY = Math.max(...nodePositions.map(pos => pos.y)) + padding * 100;
+
+    const width = maxX - minX;
+    const height = maxY - minY;
+
+    // Add the background texture for the entire canvas
+    try {
+      const canvasTexture = PIXI.Texture.from('/assets/textures/background.png');
+      const canvasBackground = new PIXI.TilingSprite(canvasTexture, this.container.width || 1400, this.container.height || 800);
+      canvasBackground.position.set(0, 0);
+      this.container.addChildAt(canvasBackground as unknown as PIXI.DisplayObject, 0);
+    } catch (error) {
+      console.warn('⚠️ No se pudo cargar la textura de fondo del canvas.');
+    }
+
+    // Add the background texture for the bounding box
+    try {
+      const boxTexture = PIXI.Texture.from('/assets/textures/diagram-background.png');
+      const boxBackground = new PIXI.TilingSprite(boxTexture, width, height);
+      boxBackground.position.set(minX, minY);
+      this.container.addChildAt(boxBackground as unknown as PIXI.DisplayObject, 1);
+    } catch (error) {
+      console.warn('⚠️ No se pudo cargar la textura de fondo del bounding box.');
+    }
+
+    // Draw the border
+    const border = new PIXI.Graphics();
+    border.lineStyle(10, 0x000000); // Black border with thickness of 10
+    border.drawRect(0, 0, width, height);
+    border.position.set(minX, minY);
+
+    // Add the border to the container
+    this.container.addChild(border as unknown as PIXI.DisplayObject);
+  }
+
+  /**
    * SPRITE DEL JUGADOR: Actualmente dibuja la abeja con código (Graphics)
    * Para usar sprites de imagen, coloca la imagen en: public/assets/sprites/bee.png
    */
@@ -240,6 +312,12 @@ export class MapRenderer {
 
     // 🗺️ SPRITE DEL MAPA: Cargar fondo del mundo
     await this.loadWorldBackground(world.id);
+
+    // 🏝️ Cargar fondo del diagrama
+    await this.loadDiagramBackground();
+
+    // 🖼️ Dibujar borde del diagrama
+    this.drawDiagramBorder(world);
     
     // Limpiar solo los contenedores de líneas y nodos (NO el personaje)
     this.linesContainer.removeChildren();
