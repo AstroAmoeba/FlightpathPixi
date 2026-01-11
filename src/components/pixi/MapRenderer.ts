@@ -135,7 +135,7 @@ export class MapRenderer {
   /**
    * Dibuja un nodo conector con textura
    */
-  private drawConnectorNode(): PIXI.Container {
+  private drawConnectorNode(node: Node): PIXI.Container {
     const nodeContainer = new PIXI.Container();
 
     if (this.connectorTexture) {
@@ -151,6 +151,17 @@ export class MapRenderer {
       circle.endFill();
       nodeContainer.addChild(circle as unknown as PIXI.DisplayObject);
     }
+
+    // Add the ID as text for connector nodes
+    const text = new PIXI.Text(node.id.toString(), {
+      fontSize: 11,
+      fill: 0xFFFFFF,
+      fontWeight: 'bold',
+      align: 'center',
+    });
+    text.anchor.set(0.5);
+    text.position.set(0, -20);
+    nodeContainer.addChild(text as unknown as PIXI.DisplayObject);
 
     return nodeContainer;
   }
@@ -333,7 +344,7 @@ export class MapRenderer {
       
       const nodeContainer = node.type === 'level'
         ? this.drawLevelNode(node, isSelected)
-        : this.drawConnectorNode();
+        : this.drawConnectorNode(node);
 
       nodeContainer.position.set(node.x, node.y);
       this.nodesContainer.addChild(nodeContainer as any);

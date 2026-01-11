@@ -23,8 +23,8 @@ export const convertGridToPixels = (worldData: WorldData): World => {
  */
 export const loadWorldsFromJSON = async (): Promise<World[]> => {
   try {
-    console.log('Intentando cargar worlds.json...');
-    const response = await fetch('/data/worlds.json');
+    console.log('Intentando cargar mapa.json...');
+    const response = await fetch('/data/mapa.json');
 
     
     if (!response.ok) {

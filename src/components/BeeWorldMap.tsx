@@ -27,6 +27,7 @@ const BeeWorldMap: React.FC = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
+        console.log('Cargando mapa.json...');
         const loadedWorlds = await loadWorldsFromJSON();
         setWorlds(loadedWorlds);
         worldsRef.current = loadedWorlds;

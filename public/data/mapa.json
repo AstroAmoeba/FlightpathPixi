@@ -1,0 +1,407 @@
+{
+    "worlds": [
+      {
+        "id": 1,
+        "name": "Mundo de las Flores",
+        "startNodeId": 100,
+        "nodes": [
+          {
+            "id": 100,
+            "gridX": 9,
+            "gridY": 7,
+            "title": "Biología",
+            "url": "/pages/biology.html",
+            "type": "level",
+            "connections": { "up": 101, "down": 102, "left": 103, "right": 104 }
+          },
+          {
+            "id": 101,
+            "gridX": 9,
+            "gridY": 6,
+            "title": "101",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 100 }
+          },
+          {
+            "id": 102,
+            "gridX": 9,
+            "gridY": 8,
+            "title": "102",
+            "url": "",
+            "type": "connector",
+            "connections": { "up": 100, "left": 105, "right": 106 }
+          },
+          {
+            "id": 103,
+            "gridX": 8,
+            "gridY": 7,
+            "title": "103",
+            "url": "",
+            "type": "connector",
+            "connections": { "right": 100, "left": 114 }
+          },
+          {
+            "id": 104,
+            "gridX": 10,
+            "gridY": 7,
+            "title": "104",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 100, "right": 141 }
+          },
+          {
+            "id": 105,
+            "gridX": 8,
+            "gridY": 8,
+            "title": "105",
+            "url": "",
+            "type": "connector",
+            "connections": { "right": 102, "down": 107 }
+          },
+          {
+            "id": 106,
+            "gridX": 10,
+            "gridY": 8,
+            "title": "106",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 102, "down": 108 }
+          },
+          {
+            "id": 109,
+            "gridX": 9,
+            "gridY": 9,
+            "title": "Diversidad",
+            "url": "/pages/diversity.html",
+            "type": "level",
+            "connections": { "left": 107, "right": 108 }
+          },
+          {
+            "id": 107,
+            "gridX": 8,
+            "gridY": 9,
+            "title": "Evolución",
+            "url": "/pages/evolution.html",
+            "type": "level",
+            "connections": { "up": 105, "right": 109 }
+          },
+          {
+            "id": 108,
+            "gridX": 10,
+            "gridY": 9,
+            "title": "Taxonomía",
+            "url": "/pages/taxonomy.html",
+            "type": "level",
+            "connections": { "up": 106, "left": 109, "right": 110 }
+          },
+          {
+            "id": 110,
+            "gridX": 11,
+            "gridY": 9,
+            "title": "Clasificación",
+            "url": "/pages/classification.html",
+            "type": "level",
+            "connections": { "left": 108 }
+          },
+          {
+            "id": 114,
+            "gridX": 7,
+            "gridY": 7,
+            "title": "114",
+            "url": "",
+            "type": "connector",
+            "connections": { "right": 103, "left": 115 }
+          },
+          {
+            "id": 115,
+            "gridX": 6,
+            "gridY": 7,
+            "title": "Fisiología",
+            "url": "/pages/physiology.html",
+            "type": "level",
+            "connections": { "right": 114, "left": 116, "up": 117 }
+          },
+          {
+            "id": 116,
+            "gridX": 5,
+            "gridY": 7,
+            "title": "116",
+            "url": "",
+            "type": "connector",
+            "connections": { "right": 115, "up": 120 }
+          },
+          {
+            "id": 117,
+            "gridX": 6,
+            "gridY": 6,
+            "title": "Fis. Reproductiva",
+            "url": "/pages/reproductive-physiology.html",
+            "type": "level",
+            "connections": { "down": 115, "up": 118 }
+          },
+          {
+            "id": 118,
+            "gridX": 6,
+            "gridY": 5,
+            "title": "Superorganismo",
+            "url": "/pages/superorganism.html",
+            "type": "level",
+            "connections": { "down": 117, "up": 119 }
+          },
+          {
+            "id": 119,
+            "gridX": 6,
+            "gridY": 4,
+            "title": "119",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 118, "left": 122, "right": 125 }
+          },
+          {
+            "id": 120,
+            "gridX": 5,
+            "gridY": 6,
+            "title": "Alimentación",
+            "url": "/pages/feeding.html",
+            "type": "level",
+            "connections": { "down": 116, "up": 121, "left": 124 }
+          },
+          {
+            "id": 121,
+            "gridX": 5,
+            "gridY": 5,
+            "title": "Comunicación",
+            "url": "/pages/communication.html",
+            "type": "level",
+            "connections": { "down": 120, "up": 122, "left": 123 }
+          },
+          {
+            "id": 122,
+            "gridX": 5,
+            "gridY": 4,
+            "title": "122",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 121, "right": 119 }
+          },
+          {
+            "id": 123,
+            "gridX": 4,
+            "gridY": 5,
+            "title": "Vuelo",
+            "url": "/pages/flight.html",
+            "type": "level",
+            "connections": { "right": 121 }
+          },
+          {
+            "id": 124,
+            "gridX": 4,
+            "gridY": 6,
+            "title": "Mecanismos de Libado",
+            "url": "/pages/nectar-mechanisms.html",
+            "type": "level",
+            "connections": { "right": 120 }
+          },
+          {
+            "id": 125,
+            "gridX": 7,
+            "gridY": 4,
+            "title": "Organización",
+            "url": "/pages/organization.html",
+            "type": "level",
+            "connections": { "left": 119, "up": 126, "down": 127 }
+          },
+          {
+            "id": 126,
+            "gridX": 7,
+            "gridY": 3,
+            "title": "126",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 125, "right": 130 }
+          },
+          {
+            "id": 127,
+            "gridX": 7,
+            "gridY": 5,
+            "title": "127",
+            "url": "",
+            "type": "connector",
+            "connections": { "up": 125, "right": 129 }
+          },
+          {
+            "id": 129,
+            "gridX": 8,
+            "gridY": 5,
+            "title": "Reina y Zángano",
+            "url": "/pages/queen-and-drone.html",
+            "type": "level",
+            "connections": { "left": 127, "right": 132, "down": 133 }
+          },
+          {
+            "id": 130,
+            "gridX": 8,
+            "gridY": 3,
+            "title": "130",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 126, "right": 131, "down": 133 }
+          },
+          {
+            "id": 131,
+            "gridX": 9,
+            "gridY": 3,
+            "title": "Obreras",
+            "url": "/pages/workers.html",
+            "type": "level",
+            "connections": { "left": 130, "down": 134, "up": 136, "right": 149 }
+          },
+          {
+            "id": 132,
+            "gridX": 9,
+            "gridY": 5,
+            "title": "132",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 129 }
+          },
+          {
+            "id": 133,
+            "gridX": 8,
+            "gridY": 4,
+            "title": "Feromonas",
+            "url": "/pages/pheromones.html",
+            "type": "level",
+            "connections": { "up": 130, "right": 129 }
+          },
+          {
+            "id": 134,
+            "gridX": 9,
+            "gridY": 4,
+            "title": "Colonización",
+            "url": "/pages/colonization.html",
+            "type": "level",
+            "connections": { "up": 131, "down": 135 }
+          },
+          {
+            "id": 135,
+            "gridX": 9,
+            "gridY": 5,
+            "title": "135",
+            "url": "",
+            "type": "connector",
+            "connections": { "up": 134 }
+          },
+          {
+            "id": 136,
+            "gridX": 9,
+            "gridY": 2,
+            "title": "Radionovela",
+            "url": "/pages/radionovela.html",
+            "type": "level",
+            "connections": { "down": 131 }
+          },
+          {
+            "id": 138,
+            "gridX": 11,
+            "gridY": 3,
+            "title": "Limpiadoras",
+            "url": "/pages/cleaners.html",
+            "type": "level",
+            "connections": { "left": 149 }
+          },
+          {
+            "id": 139,
+            "gridX": 10,
+            "gridY": 2,
+            "title": "139",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 149 }
+          },
+          {
+            "id": 141,
+            "gridX": 11,
+            "gridY": 7,
+            "title": "Ecología",
+            "url": "/pages/ecology.html",
+            "type": "level",
+            "connections": { "left": 104, "up": 142 }
+          },
+          {
+            "id": 142,
+            "gridX": 11,
+            "gridY": 6,
+            "title": "142",
+            "url": "",
+            "type": "connector",
+            "connections": { "down": 141, "right": 143 }
+          },
+          {
+            "id": 143,
+            "gridX": 12,
+            "gridY": 6,
+            "title": "Calendario",
+            "url": "/pages/calendar.html",
+            "type": "level",
+            "connections": { "left": 142, "up": 144 }
+          },
+          {
+            "id": 144,
+            "gridX": 12,
+            "gridY": 5,
+            "title": "Humano Abeja",
+            "url": "/pages/human-bee.html",
+            "type": "level",
+            "connections": { "down": 143, "up": 145 }
+          },
+          {
+            "id": 145,
+            "gridX": 12,
+            "gridY": 4,
+            "title": "Domesticación",
+            "url": "/pages/domestication.html",
+            "type": "level",
+            "connections": { "down": 144, "right": 146 }
+          },
+          {
+            "id": 146,
+            "gridX": 13,
+            "gridY": 4,
+            "title": "Cadena Reproductiva",
+            "url": "/pages/reproductive-chain.html",
+            "type": "level",
+            "connections": { "left": 145, "down": 147 }
+          },
+          {
+            "id": 147,
+            "gridX": 13,
+            "gridY": 5,
+            "title": "Agricultura",
+            "url": "/pages/agriculture.html",
+            "type": "level",
+            "connections": { "up": 146, "down": 148 }
+          },
+          {
+            "id": 148,
+            "gridX": 13,
+            "gridY": 6,
+            "title": "Cultura",
+            "url": "/pages/culture.html",
+            "type": "level",
+            "connections": { "up": 147 }
+          },
+          {
+            "id": 149,
+            "gridX": 10,
+            "gridY": 3,
+            "title": "149",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 131, "right": 138 }
+          }
+        ]
+      }
+    ]
+  }
