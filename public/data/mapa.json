@@ -21,7 +21,43 @@
             "title": "101",
             "url": "",
             "type": "connector",
-            "connections": { "down": 100 }
+            "connections": { "down": 100, "right": 666 }
+          },
+          {
+            "id": 666,
+            "gridX": 10,
+            "gridY": 6,
+            "title": "666",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 101, "up": 667 }
+          },
+          {
+            "id": 667,
+            "gridX": 10,
+            "gridY": 5,
+            "title": "Reproducción",
+            "url": "/pages/reproduccion.html",
+            "type": "level",
+            "connections": { "down": 666, "up": 668, "right": 669 }
+          },
+          {
+            "id": 668,
+            "gridX": 10,
+            "gridY": 4,
+            "title": "Organismo Especie",
+            "url": "/pages/organismo-especie.html",
+            "type": "level",
+            "connections": { "down": 667, "left": 134 }
+          },
+          {
+            "id": 669,
+            "gridX": 11,
+            "gridY": 5,
+            "title": "",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 667, "right": 144 }
           },
           {
             "id": 102,
@@ -237,7 +273,7 @@
             "title": "Reina y Zángano",
             "url": "/pages/queen-and-drone.html",
             "type": "level",
-            "connections": { "left": 127, "right": 132, "down": 133 }
+            "connections": { "left": 127, "right": 999, "down": 133, "up": 133 }
           },
           {
             "id": 130,
@@ -257,15 +293,7 @@
             "type": "level",
             "connections": { "left": 130, "down": 134, "up": 136, "right": 149 }
           },
-          {
-            "id": 132,
-            "gridX": 9,
-            "gridY": 5,
-            "title": "132",
-            "url": "",
-            "type": "connector",
-            "connections": { "left": 129 }
-          },
+
           {
             "id": 133,
             "gridX": 8,
@@ -273,7 +301,7 @@
             "title": "Feromonas",
             "url": "/pages/pheromones.html",
             "type": "level",
-            "connections": { "up": 130, "right": 129 }
+            "connections": { "up": 130, "down": 129 }
           },
           {
             "id": 134,
@@ -282,16 +310,16 @@
             "title": "Colonización",
             "url": "/pages/colonization.html",
             "type": "level",
-            "connections": { "up": 131, "down": 135 }
+            "connections": { "up": 131, "down": 999, "right": 668 }
           },
           {
-            "id": 135,
+            "id": 999,
             "gridX": 9,
             "gridY": 5,
-            "title": "135",
+            "title": "",
             "url": "",
             "type": "connector",
-            "connections": { "up": 134 }
+            "connections": { "left": 129, "up": 134 }
           },
           {
             "id": 136,
@@ -318,7 +346,43 @@
             "title": "139",
             "url": "",
             "type": "connector",
-            "connections": { "down": 149 }
+            "connections": { "down": 149, "up": 200, "right": 201 }
+          },
+          {
+            "id": 201,
+            "gridX": 11,
+            "gridY": 2,
+            "title": "201",
+            "url": "",
+            "type": "connector",
+            "connections": { "left": 139, "right": 202, "up": 203 }
+          },
+          {
+            "id": 202,
+            "gridX": 12,
+            "gridY": 2,
+            "title": "Nodriza",
+            "url": "/pages/nodriza.html",
+            "type": "level",
+            "connections": { "left": 201 }
+          },
+          {
+            "id": 203,
+            "gridX": 11,
+            "gridY": 1,
+            "title": "Guardiana",
+            "url": "/pages/guardiana.html",
+            "type": "level",
+            "connections": { "down": 201 }
+          },
+          {
+            "id": 200,
+            "gridX": 10,
+            "gridY": 1,
+            "title": "Forrajera",
+            "url": "/pages/forrajera.html",
+            "type": "level",
+            "connections": { "down": 139 }
           },
           {
             "id": 141,
@@ -354,7 +418,7 @@
             "title": "Humano Abeja",
             "url": "/pages/human-bee.html",
             "type": "level",
-            "connections": { "down": 143, "up": 145 }
+            "connections": { "down": 143, "up": 145, "left": 669 }
           },
           {
             "id": 145,
@@ -399,7 +463,7 @@
             "title": "149",
             "url": "",
             "type": "connector",
-            "connections": { "left": 131, "right": 138 }
+            "connections": { "left": 131, "right": 138, "up": 139 }
           }
         ]
       }
