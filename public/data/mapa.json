@@ -2,7 +2,7 @@
     "worlds": [
       {
         "id": 1,
-        "name": "Mundo de las Flores",
+        "name": "Paisaje Temático",
         "startNodeId": 100,
         "nodes": [
           {
@@ -10,7 +10,7 @@
             "gridX": 9,
             "gridY": 7,
             "title": "Biología",
-            "url": "/pages/biology.html",
+            "url": "/pages/levels/biology.html",
             "type": "level",
             "connections": { "up": 101, "down": 102, "left": 103, "right": 104 }
           },
@@ -37,7 +37,7 @@
             "gridX": 10,
             "gridY": 5,
             "title": "Reproducción",
-            "url": "/pages/reproduccion.html",
+            "url": "/pages/levels/reproduccion.html",
             "type": "level",
             "connections": { "down": 666, "up": 668, "right": 669 }
           },
@@ -46,7 +46,7 @@
             "gridX": 10,
             "gridY": 4,
             "title": "Organismo Especie",
-            "url": "/pages/organismo-especie.html",
+            "url": "/pages/levels/organismo-especie.html",
             "type": "level",
             "connections": { "down": 667, "left": 134 }
           },
@@ -109,7 +109,7 @@
             "gridX": 9,
             "gridY": 9,
             "title": "Diversidad",
-            "url": "/pages/diversity.html",
+            "url": "/pages/levels/diversity.html",
             "type": "level",
             "connections": { "left": 107, "right": 108 }
           },
@@ -118,7 +118,7 @@
             "gridX": 8,
             "gridY": 9,
             "title": "Evolución",
-            "url": "/pages/evolution.html",
+            "url": "/pages/levels/evolution.html",
             "type": "level",
             "connections": { "up": 105, "right": 109 }
           },
@@ -127,7 +127,7 @@
             "gridX": 10,
             "gridY": 9,
             "title": "Taxonomía",
-            "url": "/pages/taxonomy.html",
+            "url": "/pages/levels/taxonomy.html",
             "type": "level",
             "connections": { "up": 106, "left": 109, "right": 110 }
           },
@@ -136,7 +136,7 @@
             "gridX": 11,
             "gridY": 9,
             "title": "Clasificación",
-            "url": "/pages/classification.html",
+            "url": "/pages/levels/classification.html",
             "type": "level",
             "connections": { "left": 108 }
           },
@@ -154,7 +154,7 @@
             "gridX": 6,
             "gridY": 7,
             "title": "Fisiología",
-            "url": "/pages/physiology.html",
+            "url": "/pages/levels/physiology.html",
             "type": "level",
             "connections": { "right": 114, "left": 116, "up": 117 }
           },
@@ -172,7 +172,7 @@
             "gridX": 6,
             "gridY": 6,
             "title": "Fis. Reproductiva",
-            "url": "/pages/reproductive-physiology.html",
+            "url": "/pages/levels/reproductive-physiology.html",
             "type": "level",
             "connections": { "down": 115, "up": 118 }
           },
@@ -181,7 +181,7 @@
             "gridX": 6,
             "gridY": 5,
             "title": "Superorganismo",
-            "url": "/pages/superorganism.html",
+            "url": "/pages/levels/superorganism.html",
             "type": "level",
             "connections": { "down": 117, "up": 119 }
           },
@@ -199,7 +199,7 @@
             "gridX": 5,
             "gridY": 6,
             "title": "Alimentación",
-            "url": "/pages/feeding.html",
+            "url": "/pages/levels/feeding.html",
             "type": "level",
             "connections": { "down": 116, "up": 121, "left": 124 }
           },
@@ -208,7 +208,7 @@
             "gridX": 5,
             "gridY": 5,
             "title": "Comunicación",
-            "url": "/pages/communication.html",
+            "url": "/pages/levels/communication.html",
             "type": "level",
             "connections": { "down": 120, "up": 122, "left": 123 }
           },
@@ -226,7 +226,7 @@
             "gridX": 4,
             "gridY": 5,
             "title": "Vuelo",
-            "url": "/pages/flight.html",
+            "url": "/pages/levels/flight.html",
             "type": "level",
             "connections": { "right": 121 }
           },
@@ -235,7 +235,7 @@
             "gridX": 4,
             "gridY": 6,
             "title": "Mecanismos de Libado",
-            "url": "/pages/nectar-mechanisms.html",
+            "url": "/pages/levels/nectar-mechanisms.html",
             "type": "level",
             "connections": { "right": 120 }
           },
@@ -244,7 +244,7 @@
             "gridX": 7,
             "gridY": 4,
             "title": "Organización",
-            "url": "/pages/organization.html",
+            "url": "/pages/levels/organization.html",
             "type": "level",
             "connections": { "left": 119, "up": 126, "down": 127 }
           },
@@ -271,7 +271,7 @@
             "gridX": 8,
             "gridY": 5,
             "title": "Reina y Zángano",
-            "url": "/pages/queen-and-drone.html",
+            "url": "/pages/levels/queen-and-drone.html",
             "type": "level",
             "connections": { "left": 127, "right": 999, "down": 133, "up": 133 }
           },
@@ -289,7 +289,7 @@
             "gridX": 9,
             "gridY": 3,
             "title": "Obreras",
-            "url": "/pages/workers.html",
+            "url": "/pages/levels/workers.html",
             "type": "level",
             "connections": { "left": 130, "down": 134, "up": 136, "right": 149 }
           },
@@ -299,7 +299,7 @@
             "gridX": 8,
             "gridY": 4,
             "title": "Feromonas",
-            "url": "/pages/pheromones.html",
+            "url": "/pages/levels/pheromones.html",
             "type": "level",
             "connections": { "up": 130, "down": 129 }
           },
@@ -308,7 +308,7 @@
             "gridX": 9,
             "gridY": 4,
             "title": "Colonización",
-            "url": "/pages/colonization.html",
+            "url": "/pages/levels/colonization.html",
             "type": "level",
             "connections": { "up": 131, "down": 999, "right": 668 }
           },
@@ -326,7 +326,7 @@
             "gridX": 9,
             "gridY": 2,
             "title": "Radionovela",
-            "url": "/pages/radionovela.html",
+            "url": "/pages/levels/radionovela.html",
             "type": "level",
             "connections": { "down": 131 }
           },
@@ -335,7 +335,7 @@
             "gridX": 11,
             "gridY": 3,
             "title": "Limpiadoras",
-            "url": "/pages/cleaners.html",
+            "url": "/pages/levels/cleaners.html",
             "type": "level",
             "connections": { "left": 149 }
           },
@@ -362,7 +362,7 @@
             "gridX": 12,
             "gridY": 2,
             "title": "Nodriza",
-            "url": "/pages/nodriza.html",
+            "url": "/pages/levels/nodriza.html",
             "type": "level",
             "connections": { "left": 201 }
           },
@@ -371,7 +371,7 @@
             "gridX": 11,
             "gridY": 1,
             "title": "Guardiana",
-            "url": "/pages/guardiana.html",
+            "url": "/pages/levels/guardiana.html",
             "type": "level",
             "connections": { "down": 201 }
           },
@@ -380,7 +380,7 @@
             "gridX": 10,
             "gridY": 1,
             "title": "Forrajera",
-            "url": "/pages/forrajera.html",
+            "url": "/pages/levels/forrajera.html",
             "type": "level",
             "connections": { "down": 139 }
           },
@@ -389,7 +389,7 @@
             "gridX": 11,
             "gridY": 7,
             "title": "Ecología",
-            "url": "/pages/ecology.html",
+            "url": "/pages/levels/ecology.html",
             "type": "level",
             "connections": { "left": 104, "up": 142 }
           },
@@ -407,7 +407,7 @@
             "gridX": 12,
             "gridY": 6,
             "title": "Calendario",
-            "url": "/pages/calendar.html",
+            "url": "/pages/levels/calendar.html",
             "type": "level",
             "connections": { "left": 142, "up": 144 }
           },
@@ -416,7 +416,7 @@
             "gridX": 12,
             "gridY": 5,
             "title": "Humano Abeja",
-            "url": "/pages/human-bee.html",
+            "url": "/pages/levels/human-bee.html",
             "type": "level",
             "connections": { "down": 143, "up": 145, "left": 669 }
           },
@@ -425,7 +425,7 @@
             "gridX": 12,
             "gridY": 4,
             "title": "Domesticación",
-            "url": "/pages/domestication.html",
+            "url": "/pages/levels/domestication.html",
             "type": "level",
             "connections": { "down": 144, "right": 146 }
           },
@@ -434,7 +434,7 @@
             "gridX": 13,
             "gridY": 4,
             "title": "Cadena Reproductiva",
-            "url": "/pages/reproductive-chain.html",
+            "url": "/pages/levels/reproductive-chain.html",
             "type": "level",
             "connections": { "left": 145, "down": 147 }
           },
@@ -443,7 +443,7 @@
             "gridX": 13,
             "gridY": 5,
             "title": "Agricultura",
-            "url": "/pages/agriculture.html",
+            "url": "/pages/levels/agriculture.html",
             "type": "level",
             "connections": { "up": 146, "down": 148 }
           },
@@ -452,7 +452,7 @@
             "gridX": 13,
             "gridY": 6,
             "title": "Cultura",
-            "url": "/pages/culture.html",
+            "url": "/pages/levels/culture.html",
             "type": "level",
             "connections": { "up": 147 }
           },

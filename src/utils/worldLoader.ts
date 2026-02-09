@@ -19,24 +19,32 @@ export const convertGridToPixels = (worldData: WorldData): World => {
 };
 
 /**
- * Carga los mundos desde el JSON
+ * Carga los mundos desde ambos JSON
  */
 export const loadWorldsFromJSON = async (): Promise<World[]> => {
   try {
-    console.log('Intentando cargar mapa.json...');
-    const response = await fetch('/data/mapa.json');
+    // Cargar ambos archivos
+    const [resp1, resp2] = await Promise.all([
+      fetch('/data/mapa.json'),
+      fetch('/data/worlds.json')
+    ]);
 
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    if (!resp1.ok && !resp2.ok) {
+      throw new Error('No se pudo cargar ningún archivo de mundos');
     }
-    
-    const text = await response.text();
-    const data: WorldsData = JSON.parse(text);
-    
-    const convertedWorlds = data.worlds.map(convertGridToPixels);
-    console.log('✅ Mundos cargados exitosamente desde JSON');
-    
+
+    let worlds: WorldData[] = [];
+
+    if (resp1.ok) {
+      const data1: WorldsData = await resp1.json();
+      worlds = worlds.concat(data1.worlds);
+    }
+    if (resp2.ok) {
+      const data2: WorldsData = await resp2.json();
+      worlds = worlds.concat(data2.worlds);
+    }
+
+    const convertedWorlds = worlds.map(convertGridToPixels);
     return convertedWorlds;
   } catch (error) {
     console.error('❌ Error cargando mundos:', error);
