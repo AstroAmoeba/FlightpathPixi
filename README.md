@@ -6,6 +6,8 @@ Representa paisajes temáticos* navegables por el usuario, representando grafos 
 
 Los mapas presentan una estética inspirada en los mapas, sistemas de navegación y mapas de habilidades presentes en videojuegos.
 
+![FlightpathDemo-ezgif com-optimize](https://github.com/user-attachments/assets/f4682be2-8059-4814-8572-432ac6e9d51c)
+
 ---
 
 ## Features
