@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import * as PIXI from 'pixi.js';
 import { IconButton, Dialog, DialogContent } from '@mui/material';
 import { Close as CloseIcon, Public as WorldIcon } from '@mui/icons-material';
@@ -11,6 +12,7 @@ import { useKeyboardControls } from '../hooks/useKeyboardControls';
 import { World } from '../types/WorldTypes';
 
 const BeeWorldMap: React.FC = () => {
+  const location = useLocation();
   const [worlds, setWorlds] = useState<World[]>([]);
   const [currentWorld, setCurrentWorld] = useState(0);
   const [currentNodeId, setCurrentNodeId] = useState(1);
@@ -31,6 +33,16 @@ const BeeWorldMap: React.FC = () => {
         const loadedWorlds = await loadWorldsFromJSON();
         setWorlds(loadedWorlds);
         worldsRef.current = loadedWorlds;
+
+        // Si viene navegación especial desde NodeListPage
+        if (location.state && location.state.gotoWorldName && location.state.gotoNodeId) {
+          const idx = loadedWorlds.findIndex(w => w.name === location.state.gotoWorldName);
+          if (idx !== -1) {
+            setCurrentWorld(idx);
+            setCurrentNodeId(location.state.gotoNodeId);
+            return;
+          }
+        }
         setCurrentNodeId(loadedWorlds[0].startNodeId);
       } catch (error) {
         console.error('Error cargando mundos');
@@ -40,6 +52,7 @@ const BeeWorldMap: React.FC = () => {
     };
 
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Detectar móvil
@@ -156,13 +169,23 @@ const BeeWorldMap: React.FC = () => {
       <div className="absolute top-0 left-0 right-0 z-10 bg-white/90 backdrop-blur-sm shadow-lg">
         <div className="flex justify-between items-center px-6 py-4">
           <h1 className="text-2xl md:text-3xl font-bold text-yellow-600">🐝 Mapa de nodos</h1>
-          <button
-            onClick={changeWorld}
-            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md"
-          >
-            <WorldIcon />
-            <span className="hidden md:inline">{worlds[currentWorld].name}</span>
-          </button>
+          <div className="flex gap-3 items-center">
+            <button
+              onClick={changeWorld}
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md"
+            >
+              <WorldIcon />
+              <span className="hidden md:inline">{worlds[currentWorld].name}</span>
+            </button>
+            <a
+              href="/lista-de-nodos"
+              className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition-colors shadow-md"
+              style={{ textDecoration: 'none' }}
+            >
+              
+              <span className="hidden md:inline">Lista de nodos</span>
+            </a>
+          </div>
         </div>
       </div>
 

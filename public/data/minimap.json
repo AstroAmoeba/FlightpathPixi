@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "id": 130,
+      "gridX": 8,
+      "gridY": 3,
+      "title": "130",
+      "url": "",
+      "type": "connector",
+      "connections": {
+        "left": 126,
+        "right": 131,
+        "down": 133
+      }
+    },
+    {
+      "id": 131,
+      "gridX": 9,
+      "gridY": 3,
+      "title": "Obreras",
+      "url": "/pages/levels/workers.html",
+      "type": "level",
+      "connections": {
+        "left": 130,
+        "down": 134,
+        "up": 136,
+        "right": 149
+      }
+    },
+    {
+      "id": 133,
+      "gridX": 8,
+      "gridY": 4,
+      "title": "Feromonas",
+      "url": "/pages/levels/pheromones.html",
+      "type": "level",
+      "connections": {
+        "up": 130,
+        "down": 129
+      }
+    },
+    {
+      "id": 134,
+      "gridX": 9,
+      "gridY": 4,
+      "title": "Colonización",
+      "url": "/pages/levels/colonization.html",
+      "type": "level",
+      "connections": {
+        "up": 131,
+        "down": 999,
+        "right": 668
+      }
+    },
+    {
+      "id": 136,
+      "gridX": 9,
+      "gridY": 2,
+      "title": "Radionovela",
+      "url": "/pages/levels/radionovela.html",
+      "type": "level",
+      "connections": {
+        "down": 131
+      }
+    },
+    {
+      "id": 200,
+      "gridX": 10,
+      "gridY": 1,
+      "title": "Forrajera",
+      "url": "/pages/levels/forrajera.html",
+      "type": "level",
+      "connections": {
+        "down": 139
+      }
+    },
+    {
+      "id": 138,
+      "gridX": 11,
+      "gridY": 3,
+      "title": "Limpiadoras",
+      "url": "/pages/levels/cleaners.html",
+      "type": "level",
+      "connections": {
+        "left": 149
+      }
+    },
+    {
+      "id": 139,
+      "gridX": 10,
+      "gridY": 2,
+      "title": "139",
+      "url": "",
+      "type": "connector",
+      "connections": {
+        "down": 149,
+        "up": 200,
+        "right": 201
+      }
+    },
+    {
+      "id": 201,
+      "gridX": 11,
+      "gridY": 2,
+      "title": "201",
+      "url": "",
+      "type": "connector",
+      "connections": {
+        "left": 139,
+        "right": 202,
+        "up": 203
+      }
+    },
+    {
+      "id": 202,
+      "gridX": 12,
+      "gridY": 2,
+      "title": "Nodriza",
+      "url": "/pages/levels/nodriza.html",
+      "type": "level",
+      "connections": {
+        "left": 201
+      }
+    },
+    {
+      "id": 203,
+      "gridX": 11,
+      "gridY": 1,
+      "title": "Guardiana",
+      "url": "/pages/levels/guardiana.html",
+      "type": "level",
+      "connections": {
+        "down": 201
+      }
+    },
+    {
+      "id": 149,
+      "gridX": 10,
+      "gridY": 3,
+      "title": "149",
+      "url": "",
+      "type": "connector",
+      "connections": {
+        "left": 131,
+        "right": 138,
+        "up": 139
+      }
+    },
+    {
+      "id": 125,
+      "gridX": 7,
+      "gridY": 4,
+      "title": "Organización",
+      "url": "/pages/levels/organization.html",
+      "type": "level",
+      "connections": {
+        "left": 119,
+        "up": 126,
+        "down": 127
+      }
+    },
+    {
+      "id": 126,
+      "gridX": 7,
+      "gridY": 3,
+      "title": "126",
+      "url": "",
+      "type": "connector",
+      "connections": {
+        "down": 125,
+        "right": 130
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": 201,
+      "to": 203
+    },
+    {
+      "from": 130,
+      "to": 126
+    },
+    {
+      "from": 149,
+      "to": 139
+    },
+    {
+      "from": 139,
+      "to": 200
+    },
+    {
+      "from": 201,
+      "to": 202
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 131,
+      "to": 136
+    },
+    {
+      "from": 149,
+      "to": 138
+    },
+    {
+      "from": 131,
+      "to": 149
+    },
+    {
+      "from": 126,
+      "to": 125
+    },
+    {
+      "from": 130,
+      "to": 133
+    },
+    {
+      "from": 139,
+      "to": 201
+    },
+    {
+      "from": 131,
+      "to": 134
+    }
+  ]
+}
